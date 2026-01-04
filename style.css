@@ -1,9 +1,7 @@
-html, body {
+body {
   margin: 0;
-  padding: 0;
-  background: #323f60;
-  overflow: hidden;
-  height: 100%;
+  overflow-x: hidden;   /* 只鎖橫向 */
+  overflow-y: auto;     /* 垂直允許滑 */
 }
 
 canvas {
@@ -18,8 +16,8 @@ body {
 canvas {
   position: fixed;
   inset: 0;
-  background: #0e1628;
-  transition: opacity 1.2s ease;
+  z-index: 0;
+  pointer-events: none;
 }
 
 canvas.fade-out {
@@ -44,10 +42,11 @@ canvas.fade-out {
   margin-bottom: 32px;
 }
 
-.timeline h3 {
-  margin: 0;
-  font-size: 20px;
+.timeline {
+  max-width: 800px;
+  margin: 0 auto;
 }
+
 
 .timeline p {
   line-height: 1.8;
@@ -67,12 +66,13 @@ canvas {
 
 #memory {
   position: relative;
-  z-index: 1;
-
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 48px 20px 120px; /* 底部多留一點 */
+  z-index: 2;
+  min-height: 100vh;
+  padding: 60px 20px;
+  background: #0a1a2a;
+  color: white;
 }
+
 /* ===== 手機版調整 ===== */
 @media (max-width: 600px) {
 
@@ -105,6 +105,7 @@ canvas {
 canvas {
   pointer-events: none;
 }
+
 
 
 
