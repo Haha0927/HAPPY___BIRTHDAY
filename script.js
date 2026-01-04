@@ -187,4 +187,8 @@ window.addEventListener("click", () => {
     memory.classList.remove("hidden");
   }, 1200);
 });
+.hidden {
+  display: none;
+}
+
 
