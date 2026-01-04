@@ -102,3 +102,9 @@ canvas {
   }
 }
 
+canvas {
+  pointer-events: none;
+}
+
+
+
